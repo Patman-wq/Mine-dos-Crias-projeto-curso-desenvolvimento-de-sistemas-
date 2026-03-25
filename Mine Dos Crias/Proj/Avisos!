@@ -1,17 +1,57 @@
-Papel de cada programador:
-    👥 Divisão por tópicos
-Lucas → Index (Home) + Formulário 
+📄 Papel de cada programador
 
-Pedro →Cards
-
+👥 Divisão de responsabilidades
+Lucas → Página Inicial (Home) + Formulário
+Pedro → Sistema de Cards
 Julio → Páginas individuais dos jogos
 
-É o seguinte, cada um vai escrever um pouco sobre o que cada um já fez até agora, explicando mais ou menos o que fez, entenderam?
+📝 Relatório de desenvolvimento
 
-Lucas:
+Cada integrante deve descrever, de forma clara e objetiva, 
+o que já desenvolveu até o momento no projeto.
 
-Pedro:
+O objetivo é registrar o progresso individual e facilitar a criação da documentação final.
 
-Julio:
+👤 Lucas:
+O que fiz:
+(Descreva o que você desenvolveu na Home e no formulário)
 
-No final, vou tentar transformar isso daqui em um arquivo de comumentação para explicar ao professor o que a gente fez.
+Como fiz:
+(Explique brevemente como foi o processo — HTML, CSS, lógica, etc.)
+
+Dificuldades:
+(Quais problemas encontrou e como resolveu — ou não)
+
+O que falta fazer:
+(O que ainda precisa ser melhorado ou finalizado)
+
+👤 Pedro:
+O que fiz:
+(Descreva o desenvolvimento dos cards)
+
+Como fiz:
+(Estrutura, estilização, organização, etc.)
+
+Dificuldades:
+(Problemas encontrados)
+
+O que falta fazer:
+(Ajustes ou melhorias pendentes)
+
+👤 Julio:
+O que fiz:
+(Criação das páginas individuais dos jogos)
+
+Como fiz:
+(Como estruturou as páginas)
+
+Dificuldades:
+(Desafios enfrentados)
+
+O que falta fazer:
+(O que ainda precisa ser feito)
+
+📌 Observação final
+
+Essas informações serão utilizadas para montar a documentação completa do projeto, 
+que será apresentada ao professor.
