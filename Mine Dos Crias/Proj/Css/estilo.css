@@ -1,0 +1,108 @@
+/*Corpo (acho dificil alguém ler isso, então tanto faz)*/
+
+body {
+    background-color: #1C1B22;
+    text-align: center;
+}
+
+/* Header fica aqui!! */
+
+header {
+    display: grid;
+    color: #ffffff;
+    background-color: #0B0A10;
+    
+    padding: 10px;
+    border: 1px solid #7B2CBF;
+
+    position: sticky;
+    /* O menu fica fixo no topo ao rolar (copiei da internet, então não sei se vai funcionar) */
+    top: 0; /* Isso garante que o header fique no topo da página */
+    z-index: 1000; /* isso deixa o header sempre nas camadas de cima */
+    
+    grid-template-columns: 1fr 1fr 4fr 4fr; 
+    
+
+    grid-template-areas: 
+        "logo nome_logo nome_site nome_site";
+    
+    align-items: center; /* Alinha tudo verticalmente ao centro */
+}
+
+#logo {
+    width: 61px;
+    height: 61px;
+    grid-area: logo;
+    justify-self: end; /* Encosta a logo no nome */
+
+}
+
+#nome_logo {
+    font-size: 18px;
+    grid-area: nome_logo;
+    justify-self: start; /* Encosta o nome na logo */
+    margin: 0;
+    color: #ffffff;
+    text-decoration: none; /* Remove o sublinhado do link */;
+
+}
+
+#nome_site {
+    font-size: 50px;
+    grid-area: nome_site;
+    margin: 0;
+    justify-self: start;
+    padding-left: 250px;
+}
+
+/* Main nessa parte :) */ 
+
+main {
+    background-color: #1e1c2b;
+    color: #ffffff;
+    
+    padding: 10px;
+    margin-top: 20px;
+}
+
+#TituloCs {
+    font-size: 100px;
+    margin-bottom: 50px;
+    
+}
+
+.Paragrafos {
+    font-size: 20px;
+    text-align: center; /* Não sei se deixo no centro ou justificado (emoji de pessoa pensando (não sei se existe esse emoji))*/
+    color: #CFCFCF;
+}
+
+/* Se você leu isso daqui, saiba que o desenvolvedor disso está com bastante sono, então não se surpreenda se tiver algo errado ou se o código estiver bagunçado, é que ele não tem mais forças para arrumar isso, então... boa sorte lendo isso :) */
+
+/* Aside fica aqui (QUERO DORMIR!! 22:48*/
+
+aside {
+    background-color: #1e1c2b;
+    color: #ffffff;
+    
+    padding: 10px; /* é serio que eu tenho que comentar isso? */
+    margin-top: 20px;
+}
+
+/* Footer fica aqui ( Ainda tenho que fazer o relatorio disso 😢 (aprendi a colocar emoji!!)*/
+
+footer {
+    background-color: #0B0A10;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+    border: 1px solid #7B2CBF;
+}
+
+#copy {
+    font-size: 14px;
+    margin: 15px;
+    
+}
+
+/* TERMINADO!! 22:56 (acho que é isso, se tiver algo errado, é porque eu não tenho mais forças para arrumar isso, então... quem tiver lendo, não brigue comigo, sou humano e preciso dormir :) )*/
