@@ -34,7 +34,7 @@ header {
 }
 
 #logo {
-    width: 61px;
+    width: 61px; /* esse número é a proporção áurea de 100 : 100/ 1,618) */
     height: 61px;
     grid-area: logo;
     justify-self: end; /* Cola a logo no nome (amizade forte) */
