@@ -1,11 +1,18 @@
-/*Corpo (acho dificil alguém ler isso, então tanto faz)*/
+/* =========================
+   CORPO DA PÁGINA
+   (onde tudo começa)
+========================= */
 
 body {
     background-color: #1C1B22;
     text-align: center;
 }
 
-/* Header fica aqui!! */
+
+/* =========================
+   HEADER (menu fixo no topo)
+   (se quebrar aqui, ferrou tudo 👍)
+========================= */
 
 header {
     display: grid;
@@ -16,35 +23,30 @@ header {
     border: 1px solid #7B2CBF;
 
     position: sticky;
-    /* O menu fica fixo no topo ao rolar (copiei da internet, então não sei se vai funcionar) */
-    top: 0; /* Isso garante que o header fique no topo da página */
-    z-index: 1000; /* isso deixa o header sempre nas camadas de cima */
+    top: 0; /* Mantém o header no topo — tipo um grude elegante */
+    z-index: 1000; /* Fica por cima de tudo (ego elevado) */
     
     grid-template-columns: 1fr 1fr 4fr 4fr; 
-    
-
     grid-template-areas: 
         "logo nome_logo nome_site nome_site";
     
-    align-items: center; /* Alinha tudo verticalmente ao centro */
+    align-items: center;
 }
 
 #logo {
     width: 61px;
     height: 61px;
     grid-area: logo;
-    justify-self: end; /* Encosta a logo no nome */
-
+    justify-self: end; /* Cola a logo no nome (amizade forte) */
 }
 
 #nome_logo {
     font-size: 18px;
     grid-area: nome_logo;
-    justify-self: start; /* Encosta o nome na logo */
+    justify-self: start;
     margin: 0;
     color: #ffffff;
-    text-decoration: none; /* Remove o sublinhado do link */;
-
+    text-decoration: none;
 }
 
 #nome_site {
@@ -52,10 +54,14 @@ header {
     grid-area: nome_site;
     margin: 0;
     justify-self: start;
-    padding-left: 250px;
+    padding-left: 250px; /* Empurrãozinho maroto pra direita */
 }
 
-/* Main nessa parte :) */ 
+
+/* =========================
+   MAIN (conteúdo principal)
+   (a parte que realmente importa)
+========================= */
 
 main {
     background-color: #1e1c2b;
@@ -68,28 +74,33 @@ main {
 #TituloCs {
     font-size: 100px;
     margin-bottom: 50px;
-    
 }
 
 .Paragrafos {
     font-size: 20px;
-    text-align: center; /* Não sei se deixo no centro ou justificado (emoji de pessoa pensando (não sei se existe esse emoji))*/
+    text-align: center; /* Se ficar feio, testa justify e reza */
     color: #CFCFCF;
 }
 
-/* Se você leu isso daqui, saiba que o desenvolvedor disso está com bastante sono, então não se surpreenda se tiver algo errado ou se o código estiver bagunçado, é que ele não tem mais forças para arrumar isso, então... boa sorte lendo isso :) */
 
-/* Aside fica aqui (QUERO DORMIR!! 22:48*/
+/* =========================
+   ASIDE (conteúdo logo em baixo)
+   (o famoso "extra", mas importante)
+========================= */
 
 aside {
     background-color: #1e1c2b;
     color: #ffffff;
     
-    padding: 10px; /* é serio que eu tenho que comentar isso? */
+    padding: 10px;
     margin-top: 20px;
 }
 
-/* Footer fica aqui ( Ainda tenho que fazer o relatorio disso 😢 (aprendi a colocar emoji!!)*/
+
+/* =========================
+   FOOTER (rodapé)
+   (ninguém lê, mas tá lá)
+========================= */
 
 footer {
     background-color: #0B0A10;
@@ -102,7 +113,11 @@ footer {
 #copy {
     font-size: 14px;
     margin: 15px;
-    
 }
 
-/* TERMINADO!! 22:56 (acho que é isso, se tiver algo errado, é porque eu não tenho mais forças para arrumar isso, então... quem tiver lendo, não brigue comigo, sou humano e preciso dormir :) )*/
+
+/* =========================
+   FIM
+========================= */
+
+/* Se chegou até aqui, parabéns — você leu mais que 90% das pessoas (talvez eu seja uma das 90%)😴 */
