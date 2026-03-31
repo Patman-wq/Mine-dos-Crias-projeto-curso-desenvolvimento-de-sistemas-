@@ -1,12 +1,11 @@
 /* AVISOS DE ESTILO: */
-/* Divisão das linhas: 1° 17% 2° 65% 3° 17% */
-/* Eu preciso urgentemente arrumar essas sobreposições,
- para isso vou tentar tirar a posição relativa e absoluta, 
-já tenho em mente como fazer isso. Mas deixarei para amanhã. Boa noite leitor do meu código (estou ficando maluco)*/
+
 
 
 /* Puxando as fontes do Google pra não ficar com cara de site de 1990 */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+
 
 /* Fonte básica pra quando o usuário quiser ler sem cansar a vista */
 .inter-normal {
@@ -32,6 +31,7 @@ body {
 
 /* O esqueleto do site: Grid pra não virar bagunça */
 .container {
+    
     display: grid;
     grid-template-columns: 1fr;
     /* Header e Main mandam, o resto obedece */
@@ -41,11 +41,14 @@ body {
         "main"
         "aside"
         "footer";
-    gap: 5px;
+    gap: 0.5%;
     min-height: 100vh; /* Garante que o rodapé não suba pro meio da tela */
 }
 
 header {
+    box-shadow: 0px 0px 15px #7B2CBF;
+    text-decoration: none;
+    border-radius: 23px;
     display: grid;
     grid-template-columns: 1fr 1fr 3fr;
     grid-template-rows: 5vh 5vh 5vh;
@@ -54,22 +57,29 @@ header {
     background-color: #1b1922;
     color: #EAEAEA;
     padding: 10px 5%;
+    padding-bottom: -10000px;
+
+}
+
+a {
+    text-decoration: none;
+    
 }
 
 /* Logo flutuando no topo */
 #logo {
-    position: absolute;
-    top: 5%;
-    left: 0.5%;
+    position: relative;
+    top: 10%;
+    left: 10%;
     width: 61px; 
     grid-area: logo;
 }
 
 /* Nome do site com aquele roxo estiloso */
 #Nome_Site {
-    position: absolute;
-    top: 1%;
-    left: 5%;
+    position: relative;
+    top: 25%;
+    left: -18%;
     grid-area: nomes;
     justify-items: start;
     font-size: 25px;
@@ -80,16 +90,19 @@ header {
 
 /* Onde a mágica do Counter-Strike acontece */
 #Csgo {
-    position: absolute;
+    position: relative;
     top: 3%;
-    left: 30%;
+    left: -25%;
     grid-area: cs;
-    font-size: 40px;
+    font-size: 50px;
     font-family: Orbitron, sans-serif;
+    
 }
 
 /* O recheio do site */
 main {
+    box-shadow: 0px 0px 15px #7B2CBF;
+    border-radius: 23px;
     padding: 0 10%;
     grid-area: main;
     background-color: #1C1B22 ;
@@ -105,6 +118,7 @@ main {
     text-align: center;
     font-size: 61px;
     font-family: Orbitron, sans-serif;
+    padding: 10px 0 20px 0 ;
 }
 
 /* Ajustes finos de posição (na base da tentativa e erro) */
@@ -114,15 +128,14 @@ main {
     top: -5%;
     left: auto;
     font-size: 37px;
-    padding: 0;
+    padding-bottom: 15px;
 }   
 
 #SubtCs {
     text-align: center;
-    
     top: -5%;
-    left: auto;
-    font-size: 30px;
+    
+    font-size: 100px;
     padding: 5px;
 }
 
@@ -137,21 +150,113 @@ main {
     text-indent: 30px;
     text-indent: 50px; /* Dá um espaço na primeira linha do paragrafo */
     padding: 2% 5% 0 5%;
+    
 }
 
 
 /* Fim da linha */
 footer {
+    box-shadow: 0px 4px 15px #7B2CBF;
+    color: #EAEAEA;
     grid-area: footer;
     background-color: #1C1B22;
     text-align: center;
-    padding: 0;
 }
 
 /* Pra avisar que o código tem dono, no caso... nosso codigo  */
 #direitos {
     position: relative;
-    bottom: 25%;
-    font-size: 14px;
+    top: 25%;
+    grid-area: direitos;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    
+}
+
+
+
+
+@media screen and (max-width: 980px) {
+.container {
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto; 
+    grid-template-areas:
+        "header"
+        "main"
+        "aside"
+        "footer";
+    gap: 0.11%;
+    min-height: 100vh; /* Garante que o rodapé não suba pro meio da tela */
+}
+
+    header {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto; 
+        grid-template-areas: 
+            "logo"
+            "nomes"
+            "cs";
+        
+        text-align: center; 
+        gap: 1px; 
+        padding: 15px 5%;
+        padding-bottom: 20px; 
+    }
+
+    #logo {
+        grid-area: logo;
+        width: 50px; 
+        justify-self: center; 
+        position: static; 
+    }
+
+    #Nome_Site {
+        grid-area: nomes;
+        font-size: 20px;
+        position: static;
+        left: 0;
+    }
+
+    #Csgo {
+        grid-area: cs;
+        font-size: 30px;
+        position: static;
+        left: 0;
+    }
+    #TituloCs {
+        font-size: 30px;
+    }
+    #TituloCs2 {
+
+    font-size: 25px;
+}   
+
+
+
+.Paragrafos{
+    font-size: 15px;
+}
+
+
+footer {
+    box-shadow: 0px 4px 15px #7B2CBF;
     color: #EAEAEA;
+    grid-area: footer;
+    background-color: #1C1B22;
+    text-align: center;
+}
+
+/* Pra avisar que o código tem dono, no caso... nosso codigo  */
+#direitos {
+    position: relative;
+    top: 25%;
+    grid-area: direitos;
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    
+}
+
+
 }
