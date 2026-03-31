@@ -1,0 +1,159 @@
+/* Puxando as fontes do Google pra não ficar com cara de site de 1990 */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+/* Fonte básica pra quando o usuário quiser ler sem cansar a vista */
+.inter-normal {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Fonte futurista pra fingir que o site é da NASA */
+.orbitron {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; 
+  font-style: normal;
+}
+
+body {
+    background-color: #121117; /* Um pretinho nada básico */
+    color: black;   
+    margin: 0; /* isso daqui remove a margem padrão que tem no html */
+}
+
+/* O esqueleto do site: Grid pra não virar bagunça */
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Header e Main mandam, o resto obedece */
+    grid-template-rows: auto/*header*/ 1fr/* main */ auto/*aside*/ auto/*footer*/; 
+    grid-template-areas:
+        "header"
+        "main"
+        "aside"
+        "footer";
+    gap: 5px;
+    min-height: 100vh; /* Garante que o rodapé não suba pro meio da tela */
+}
+
+header {
+   grid-area: header;
+   background-color: #1b1922;
+   text-align: justify;
+   color: #EAEAEA;
+}
+
+/* Logo flutuando no topo */
+#logo {
+    position: absolute;
+    align-items: center;
+    top: 0.6%;
+    left: auto;
+    width: 45px; 
+    grid-area: logo;
+}
+
+/* Nome do site com aquele roxo estiloso */
+#Nome_Site {
+    position: absolute;
+    align-items: center;
+    top: -7%;
+    left: 75px ;
+    font-size: 25px;
+    font-family: Orbitron, sans-serif;
+    text-decoration: none;
+    color: #7B2CBF;
+}
+
+/* Onde a mágica do Counter-Strike acontece */
+#Csgo {
+    position: absolute;
+    top: -3.2%; /* medi com uma regua */
+    left: 30%;
+    font-size: 40px;
+    font-family: Orbitron, sans-serif;
+}
+
+/* O recheio do site */
+main {
+    padding: 0 10%;
+    grid-area: main;
+    background-color: #1C1B22 ;
+    color:#EAEAEA ;
+    font-family: Inter, sans-serif;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2vh;
+}
+
+/* Título gigante pra ninguém dizer que não viu */
+#TituloCs {
+    grid-area: titulo;
+    text-align: center;
+    font-size: 61px;
+    font-family: Orbitron, sans-serif;
+}
+
+/* Ajustes finos de posição (na base da tentativa e erro) */
+#TituloCs2 {
+    text-align: center;
+    position: relative;
+    top: -5%;
+    left: auto;
+    font-size: 37px;
+    padding: 0;
+}   
+
+#SubtCs {
+    text-align: center;
+    position: relative;
+    top: -5%;
+    left: auto;
+    font-size: 30px;
+    padding: 5px;
+}
+
+/* Onde o textão vai morar */
+.Paragrafos {
+    grid-area: paragrafos;
+    position: relative;
+    top: -5%;
+    left: 5%;
+    font-size: 22px;
+    text-align: center;
+    text-indent: 50px; 
+    padding: 2% 5% 0 5%;
+}
+
+/* Aquele finalzinho, vem um negocinho que quase ninguém olha, mas é importante */
+aside {
+    grid-area: aside;
+    background-color: #1C1B22;
+    text-align: center;
+    color: #EAEAEA;
+    font-family: Inter, sans-serif;
+}
+
+#pesquisador {
+    position: relative;
+    top: 12%;
+    font-size: 16px;
+}
+
+/* Fim da linha */
+footer {
+    grid-area: footer;
+    background-color: #1C1B22;
+    text-align: center;
+    padding: 0;
+}
+
+/* Pra avisar que o código tem dono, no caso... nosso codigo  */
+#direitos {
+    position: relative;
+    bottom: 25%;
+    font-size: 14px;
+    color: #EAEAEA;
+}
