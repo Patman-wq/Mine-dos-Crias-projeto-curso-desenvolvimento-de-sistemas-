@@ -66,13 +66,13 @@ body {
 /* --------- Área do cabeçalho (header) ---------- */
 
 header {
-    box-shadow: 0px 0px 15px #7B2CBF; /* Efeito visual de destaque */
+    box-shadow: 0px 0px 15px #B11E23; /* Efeito visual de destaque */
     text-decoration: none;
     border-radius: 23px;
     display: grid;
     grid-template-columns: 1fr 1fr 3fr; /* Proporção para logo, nome do site e título */
     grid-template-rows: 5vh 5vh 5vh; /* Altura fixa para o header */
-    grid-template-areas: "logo nomes cs"; /* Organização dos elementos dentro header */
+    grid-template-areas: "logo nomes tp"; /* Organização dos elementos dentro header */
     grid-area: header;
     background-color: #1b1922;
     color: #EAEAEA;
@@ -109,11 +109,11 @@ a {
 }
 
 /* Título principal da página */
-#Csgo {
+.titulo-principal {
     position: relative;
     top: 3%;
     left: -25%;
-    grid-area: cs;
+    grid-area: tp;
     font-size: 50px;
     font-family: Orbitron, sans-serif;
     
@@ -121,7 +121,7 @@ a {
 
 /* --------- Área principal de conteúdo ---------- */
 main {
-    box-shadow: 0px 0px 15px #7B2CBF;
+    box-shadow: 0px 0px 15px #B11E23;
     border-radius: 23px;
     padding: 0 10%;
     grid-area: main;
@@ -133,7 +133,7 @@ main {
 }
 
 /* Título principal do conteúdo */
-#TituloCs {
+.titulo {
     grid-area: titulo;
     text-align: center;
     font-size: 61px;
@@ -142,7 +142,7 @@ main {
 }
 
 /* Ajustes de tamanho e alinhamento */
-#TituloCs2 {
+.subtitulo {
     text-align: center;
     
     top: -5%;
@@ -151,7 +151,7 @@ main {
     padding-bottom: 15px;
 }   
 
-#SubtCs {
+.subtitulo-secao {
     text-align: center;
     top: -5%;
     
@@ -160,7 +160,7 @@ main {
 }
 
 /* Estilização dos parágrafos */
-.Paragrafos {
+.conteudo-texto {
     grid-area: paragrafos;
     
     top: -5%;
@@ -177,7 +177,7 @@ main {
 
 /* Rodapé do site */
 footer {
-    box-shadow: 0px 4px 15px #7B2CBF;
+    box-shadow: 0px 4px 15px #B11E23;
     color: #EAEAEA;
     grid-area: footer;
     background-color: #1C1B22;
@@ -218,7 +218,7 @@ footer {
         grid-template-areas: 
             "logo"
             "nomes"
-            "cs";
+            "tp";
         
         text-align: center; /* Centraliza elementos no layout mobile */
         gap: 1px; 
@@ -240,21 +240,19 @@ footer {
         left: 0;
     }
 
-    #Csgo {
-        grid-area: cs;
+    .titulo-principal {
+        grid-area: tp;
         font-size: 30px;
         position: static;
         left: 0;
     }
-    #TituloCs {
+    .titulo {
         font-size: 30px; /* Reduz tamanho para melhor adaptação */
     }
-    #TituloCs2 {
+    .subtitulo {
 
     font-size: 25px;
 }   
-
-
 
 .Paragrafos{
     font-size: 15px; /* Ajuste para leitura em telas menores */
@@ -278,14 +276,11 @@ footer {
     font-size: 10px;
     
 }
-
-
 }
-
 
 /* Ajustes para telas maiores (desktop) */
 @media screen and (min-width: 1024px) {
-    #Csgo {
+    .titulo-principal {
         font-size: 40px; /* Ajuste de proporção para telas grandes */
     }
 }
