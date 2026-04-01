@@ -1,0 +1,287 @@
+/* 
+Autor: Julio Basilio 
+Projeto: Mine dos Crias
+Descrição: Folha de estilos responsável pelo layout e aparência do site.
+Tecnologias: HTML5, CSS3 (Grid Layout, Responsividade)
+Data: 2026
+*/
+
+/* AVISOS DE ESTILO: 
+Qualquer alteração deve ser feita com cuidado para manter a consistência visual 
+e a responsividade do site.
+O site foi projetado para ser visualmente agradável e funcional
+em diferentes dispositivos, utilizando de medidas específicas
+para garantir uma boa experiência de usuário.
+Alterações devem ser documentadas 
+e testadas em diferentes resoluções para garantir a compatibilidade. 
+ASSINADO: Julio Basilio, Desenvolvedor Web e Designer do Mine dos Crias. 
+*/
+
+
+/* Importação de fontes externas para melhorar o visual do site */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+
+/* Fonte padrão para leitura confortável em textos longos */
+.inter-normal {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Fonte estilizada para títulos e elementos de destaque */
+.orbitron {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; 
+  font-style: normal;
+}
+
+body {
+    background: linear-gradient(90deg,rgba(40, 89, 21, 1) , rgba(37, 161, 88, 1) , rgba(150, 139, 38, 1) );
+    /* Cor escura para melhor contraste visual */
+    color: black;   
+    margin: 0; /* Remove a margem padrão do navegador */
+}
+
+/* Estrutura principal usando Grid Layout para organização */
+.container {
+    
+    display: grid;
+    grid-template-columns: 1fr;
+
+    /* Organização vertical das seções principais */
+    grid-template-rows: auto auto auto;  /* Ajuste automático para o conteúdo */
+    grid-template-areas:
+        "header"
+        "main"
+        "aside"
+        "footer";
+
+    gap: 0.5%; /* Espaçamento entre as áreas para melhor visualização */
+    min-height: 100vh; /* Garante que o footer permaneça no final */
+}
+
+
+/* --------- Área do cabeçalho (header) ---------- */
+
+header {
+    box-shadow: 0px 0px 15px #75ff42; /* Efeito visual de destaque */
+    text-decoration: none;
+    border-radius: 23px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr; /* Proporção para logo, nome do site e título */
+    grid-template-rows: 5vh 5vh 5vh; /* Altura fixa para o header */
+    grid-template-areas: "logo nomes tp"; /* Organização dos elementos dentro header */
+    grid-area: header;
+    background-color: #1b1922;
+    color: #EAEAEA;
+    padding: 10px 5%; /* Espaçamento interno para melhor visualização */
+    padding-bottom: -10000px; /* Ajuste aplicado no layout (revisar futuramente) */
+
+}
+
+a {
+    text-decoration: none; /* Remove sublinhado padrão dos links */
+    
+}
+
+/* Posicionamento da logo */
+#logo {
+    position: relative;
+    top: 10%;
+    left: 10%;
+    width: 61px; 
+    grid-area: logo;
+}
+
+/* Nome do site com destaque visual */
+#Nome_Site {
+    position: relative;
+    top: 25%;
+    left: -18%;
+    grid-area: nomes;
+    justify-items: start;
+    font-size: 25px;
+    font-family: Orbitron, sans-serif;
+    text-decoration: none;
+    color: #7B2CBF;
+}
+
+/* Título principal da página */
+.titulo-principal {
+    position: relative;
+    top: 3%;
+    left: -25%;
+    grid-area: tp;
+    font-size: 50px;
+    font-family: Orbitron, sans-serif;
+    
+}
+
+/* --------- Área principal de conteúdo ---------- */
+main {
+    box-shadow: 0px 0px 15px #75ff42 ;
+    border-radius: 23px;
+    padding: 0 10%;
+    grid-area: main;
+    background-color: #1C1B22 ;
+    color:#EAEAEA ;
+    font-family: Inter, sans-serif;
+    text-align: center;
+
+}
+
+/* Título principal do conteúdo */
+.titulo {
+    grid-area: titulo;
+    text-align: center;
+    font-size: 61px;
+    font-family: Orbitron, sans-serif;
+    padding: 10px 0 20px 0 ;
+}
+
+/* Ajustes de tamanho e alinhamento */
+.subtitulo {
+    text-align: center;
+    
+    top: -5%;
+    left: auto;
+    font-size: 37px;
+    padding-bottom: 15px;
+}   
+
+.subtitulo-secao {
+    text-align: center;
+    top: -5%;
+    
+    font-size: 100px; /* Destaque visual para subtítulo */
+    padding: 5px;
+}
+
+/* Estilização dos parágrafos */
+.conteudo-texto {
+    grid-area: paragrafos;
+    
+    top: -5%;
+    left: 5%;
+    font-size: 22px;
+    text-align: justify;
+    text-indent: 30px;
+    text-indent: 50px; /* Recuo na primeira linha do parágrafo */
+    padding: 2% 5% 0 5%;
+    
+}
+
+/* --------- Área lateral (aside) ---------- */
+
+/* Rodapé do site */
+footer {
+    box-shadow: 0px 4px 15px #75ff42;
+    color: #EAEAEA;
+    grid-area: footer;
+    background-color: #1C1B22;
+    text-align: center;
+}
+
+/* Texto de direitos autorais */
+#direitos {
+    position: relative;
+    top: 25%;
+    grid-area: direitos;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    
+}
+
+/* --------- Responsividade para dispositivos móveis e desktop ---------- */
+
+/* Ajustes para telas menores (mobile) */
+@media screen and (max-width: 980px) {
+.container {
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto; 
+    grid-template-areas:
+        "header"
+        "main"
+        "aside"
+        "footer";
+    gap: 0.11%;
+    min-height: 100vh; /* Mantém o footer no final mesmo em telas menores */
+}
+
+    header {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto; 
+        grid-template-areas: 
+            "logo"
+            "nomes"
+            "tp";
+        
+        text-align: center; /* Centraliza elementos no layout mobile */
+        gap: 1px; 
+        padding: 15px 5%;
+        padding-bottom: 20px; 
+    }
+
+    #logo {
+        grid-area: logo;
+        width: 50px; 
+        justify-self: center; 
+        position: static; /* Remove posicionamento relativo no mobile */
+    }
+
+    #Nome_Site {
+        grid-area: nomes;
+        font-size: 20px;
+        position: static;
+        left: 0;
+    }
+
+    .titulo-principal {
+        grid-area: tp;
+        font-size: 30px;
+        position: static;
+        left: 0;
+    }
+    .titulo {
+        font-size: 30px; /* Reduz tamanho para melhor adaptação */
+    }
+    .subtitulo {
+
+    font-size: 25px;
+}   
+
+.Paragrafos{
+    font-size: 15px; /* Ajuste para leitura em telas menores */
+}
+
+
+footer {
+    box-shadow: 0px 4px 15px #75ff42;
+    color: #EAEAEA;
+    grid-area: footer;
+    background-color: #1C1B22;
+    text-align: center;
+}
+
+/* Versão reduzida do texto de direitos autorais */
+#direitos {
+    position: relative;
+    top: 25%;
+    grid-area: direitos;
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    
+}
+}
+
+/* Ajustes para telas maiores (desktop) */
+@media screen and (min-width: 1024px) {
+    .titulo-principal {
+        font-size: 37px; /* Ajuste de proporção para telas grandes */
+    }
+}
