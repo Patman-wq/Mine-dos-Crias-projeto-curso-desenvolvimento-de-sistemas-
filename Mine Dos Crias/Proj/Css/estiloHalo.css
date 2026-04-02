@@ -1,0 +1,25 @@
+body {
+    background:  #121117;
+    /* Cor escura para melhor contraste visual */
+    color: black;   
+    margin: 0; /* Remove a margem padrão do navegador */
+    text-align: center; /* Centraliza o texto para melhor apresentação */
+}
+
+h1{
+    font-size: 40px;
+    color: #EAEAEA;
+    font-family: Arial, sans-serif;
+    text-align: center;
+
+}
+
+h2 {
+    font-size: 30px;
+    color: #EAEAEA;
+    font-family: Arial, sans-serif;
+    text-align: center;}
+
+img{
+    width: 35%;
+}
