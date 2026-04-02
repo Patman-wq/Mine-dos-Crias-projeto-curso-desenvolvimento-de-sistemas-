@@ -4,6 +4,15 @@ body{
      font-family: Arial, Helvetica, sans-serif;
 }
 img {
-    width: 25%;
+    width: 40%;
     
+}
+
+h1{
+    color: #f0a500;
+    font-size: 70px;
+}
+h2{
+    color: #f0a500;
+    font-size: 50px;
 }
