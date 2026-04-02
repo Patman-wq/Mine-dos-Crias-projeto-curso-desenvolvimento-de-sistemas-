@@ -255,8 +255,8 @@ footer {
     font-size: 25px;
 }   
 
-.Paragrafos{
-    font-size: 15px; /* Ajuste para leitura em telas menores */
+.conteudo-texto{
+    font-size: 10px; /* Ajuste para leitura em telas menores */
 }
 
 
