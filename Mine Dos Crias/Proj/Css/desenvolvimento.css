@@ -1,0 +1,39 @@
+body{
+    background-color: #121117; /* Cor escura para melhor contraste visual */
+    color: black;   
+    margin: 0; /* Remove a margem padrão do navegador */
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h1{
+    font-size: 36px; /* Tamanho grande para destaque */
+    color: #EAEAEA; /* Cor clara para melhor legibilidade */
+    margin-top: 40px; /* Espaçamento superior para melhor visualização */
+}
+h2{
+    font-size: 24px; /* Tamanho médio para subtítulos */
+    color: #EAEAEA; /* Cor clara para melhor legibilidade */
+    margin-top: 20px; /* Espaçamento superior para melhor visualização */
+}
+
+img {
+    width: 30%;
+}   
+
+footer {
+    color: #EAEAEA;
+    grid-area: footer;
+    background-color: #1C1B22;
+    text-align: center;
+}
+
+/* Versão reduzida do texto de direitos autorais */
+#direitos {
+    position: relative;
+    top: 25%;
+    grid-area: direitos;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    
+}
