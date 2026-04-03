@@ -111,8 +111,8 @@ a {
 /* Título principal da página */
 .titulo-principal {
     position: relative;
-    top: 3%;
-    left: -25%;
+    top: 65%;
+    left: 0%;
     grid-area: tp;
     font-size: 50px;
     font-family: Orbitron, sans-serif;
@@ -281,6 +281,11 @@ footer {
 /* Ajustes para telas maiores (desktop) */
 @media screen and (min-width: 1024px) {
     .titulo-principal {
-        font-size: 40px; /* Ajuste de proporção para telas grandes */
+        font-size: 50px; /* Ajuste de proporção para telas grandes */
+        position: relative;
+        top: 56%;
+        left: -1%;
     }
+   
+    
 }
