@@ -1,0 +1,115 @@
+/* 
+Autor: Julio Basilio e Lucas Almeida
+Projeto: Mine dos Crias
+Descrição: Folha de estilos responsável pelo layout e aparência do site.
+Tecnologias: HTML5, CSS3 (Grid Layout, Responsividade)
+Data: 2026
+*/
+
+/* AVISOS DE ESTILO: 
+Qualquer alteração deve ser feita com cuidado para manter a consistência visual 
+e a responsividade do site.
+O site foi projetado para ser visualmente agradável e funcional
+em diferentes dispositivos, utilizando de medidas específicas
+para garantir uma boa experiência de usuário.
+Alterações devem ser documentadas 
+e testadas em diferentes resoluções para garantir a compatibilidade. 
+ASSINADO: Julio Basilio, Desenvolvedor Web e Designer do Mine dos Crias. 
+*/
+
+
+/* Importação de fontes externas para melhorar o visual do site */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+
+/* Fonte padrão para leitura confortável em textos longos */
+.inter-normal {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Fonte estilizada para títulos e elementos de destaque */
+.orbitron {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    text-align: center;
+    background: #121117;
+    /* Cor escura para melhor contraste visual */
+    color: black;
+    margin: 0;
+    /* Remove a margem padrão do navegador */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: "header"
+        "nav"
+        "main"
+        "aside"
+        "footer";
+    gap: 7px;
+
+}
+
+header {
+    background-color: #1b1922;
+    grid-area: header;
+    color: #EAEAEA;
+    font-family: Orbitron, sans-serif;
+    /* Divisão do header */
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+    grid-template-rows: 5vh 5vh 5vh; /* Altura fixa para o header */
+    grid-template-areas: "logo nome_site titulo"; /* Organização dos elementos dentro header */
+}
+
+#logo {
+    position: relative;
+    top: 10%;
+    left: -10%;
+    width: 61px;
+    grid-area: logo;
+    padding-bottom: 4%;
+}
+
+#Nome_Site {
+    grid-area: nome_site;
+    position: relative;
+    right: 10%;
+    padding: 2%;
+}
+
+.titulo-principal {
+    grid-area: titulo;
+    position: relative;
+    text-align: center;
+}
+
+nav {
+    background-color: blue;
+    grid-area: nav;
+}
+
+main {
+    background-color: blueviolet;
+    grid-area: main;
+}
+
+aside {
+    background-color: brown;
+    grid-area: aside;
+}
+
+footer {
+    background-color: red;
+    grid-area: footer;
+}
