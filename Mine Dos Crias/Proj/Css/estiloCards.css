@@ -11,6 +11,7 @@ body{
     "nav"
     "main"
     "footer";
+    gap: 6px;
 }
 
 header{
